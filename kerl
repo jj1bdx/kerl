@@ -791,8 +791,9 @@ _flags() {
     # We need to munge the LD and DED flags for clang 9/10 shipped with
     # High Sierra (macOS 10.13) and Mojave (macOS 10.14) and quite
     # probably for Catalina (macOS 10.15)
+    # disabled (originally for Darwin)
     case "$KERL_SYSTEM" in
-        Darwin)
+        Darwin-disabled)
             osver=$(uname -r)
             case "$osver" in
                 # TODO: Remove this in a future kerl release, probably
